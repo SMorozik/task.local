@@ -147,10 +147,10 @@ if (isset($_POST['registration-submit'])) {
 					</form>
 				</div>
 			</div>
-			<a href="/list.php"><i class="fa fa-link"></i> Code on Github</a>
+			<a href="https://github.com/SMorozik/task.local" target="_blank"><i class="fa fa-link"></i> Code on Github</a>
 		</div>
 	<?php else: ?>
-		<div class="alert alert-success" id="success">Спасибо за регистрацию. <a href="/"><strong>Попробовать еще ↝</strong></a></div>
+		<div class="alert alert-success" id="success">Спасибо за регистрацию. <a href="/"><strong>Вернуться ↝</strong></a></div>
 	<?php endif; ?>
 	</div>
 
