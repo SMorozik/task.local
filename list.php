@@ -78,7 +78,7 @@ $result = $query->fetchAll();
 				<?php endforeach; ?>
 			</table>
 		</div>
-		<a href="/"><i class="fa fa-link"></i> Вернуться к форме</a>
+		<a href="/"><i class="fa fa-angle-double-left"></i> Вернуться к форме</a>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
