@@ -11,7 +11,7 @@ if (isset($_POST['registration-submit'])) {
 	$username = $_POST['username'];
 	$phone = $_POST['phone'];
 
-	if (isset($company)) {
+	if ($company != '') {
 		if (!array_key_exists($company, $companiesArray)) {
 			$errors[] = 'Пожалуйста выберите <b>компанию</b>.';
 		}
@@ -19,7 +19,7 @@ if (isset($_POST['registration-submit'])) {
 		$errors[] = 'Пожалуйста выберите <b>компанию</b>.';
 	}
 
-	if (isset($username)) {
+	if ($username != '') {
 		if (!preg_match("/^[а-яА-ЯёЁa-zA-Z]{3,50}$/u", $username)) {
 			$errors[] = '<b>Имя</b> может состоять только из букв.';
 		}
@@ -27,12 +27,12 @@ if (isset($_POST['registration-submit'])) {
 		$errors[] = 'Пожалуйста введите <b>Имя</b>.';
 	}
 
-	if (isset($phone)) {
+	if ($phone != '') {
 		if (!preg_match("/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10,10}$/", $phone)) {
 			$errors[] = 'Неправильный <b>Номер телефона</b>';
 		}
 	} else {
-		$errors[] = 'Пожалуйста введите свой <b>Номер телефона</b>.';
+		$errors[] = 'Пожалуйста введите <b>Номер телефона</b>.';
 	}
 
 	if (!$errors) {
