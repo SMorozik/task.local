@@ -44,11 +44,15 @@ $result = $query->fetchAll();
 		}
 
 		.list table .company {
-			width: 450px;
+			width: 350px;
 		}
 
 		.list table .username {
-			width: 450px;
+			width: 350px;
+		}
+
+		.list table .phone {
+			width: 200px;
 		}
 
 		.list table .date {
@@ -66,6 +70,7 @@ $result = $query->fetchAll();
 					<th class="ID">ID</th>
 					<th class="company">Компания</th>
 					<th class="username">Имя</th>
+					<th class="phone">Телефон</th>
 					<th class="date">Дата</th>
 				</tr>
 				<?php foreach($result as $item): ?>
@@ -73,6 +78,7 @@ $result = $query->fetchAll();
 						<td><?= $item['id']; ?></td>
 						<td><?= $companiesArray[$item['company']]; ?></td>
 						<td><?= $item['username']; ?></td>
+						<td><?= $item['phone']; ?></td>
 						<td><?= date(DATE_RFC822, $item['created_at']); ?></td>
 					</tr>
 				<?php endforeach; ?>
